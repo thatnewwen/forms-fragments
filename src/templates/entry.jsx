@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { BodyText } from "../slices";
 import { graphql } from "gatsby";
 import styled from "@emotion/styled";
 import {
@@ -28,7 +29,7 @@ const Hero = styled.header`
     font-family: "Source Sans Pro", -apple-system, "BlinkMacSystemFont";
     font-size: 14px;
     position: absolute;
-    margin-left: -30px;
+    margin-left: -45px;
     font-weight: 400;
     @media (max-width: ${(props) => props.theme.breakpoints.m}) {
       display: none;
@@ -49,7 +50,7 @@ const Headline = styled.p`
 `;
 
 const Entryy = styled.p`
-  font-size: 14px;
+  font-size: 12px;
   max-width: 620px;
   font-family: "Source Sans Pro";
   padding-bottom: 40px;
@@ -60,11 +61,11 @@ const EntryWrapper = Wrapper.withComponent("main");
 const Entry = ({ data: { prismicEntry }, location }) => {
   const { data } = prismicEntry;
 
-  const renderEssays = () => {
-    if (data.essays) {
-      return <SliceZone allSlices={data.essays.document} />;
-    }
-  };
+  // const renderEssays = () => {
+  //   if (data.essays) {
+  //     return <SliceZone allSlices={data.essays.document} />;
+  //   }
+  // };
   return (
     <Layout customSEO>
       <SEO
@@ -85,8 +86,10 @@ const Entry = ({ data: { prismicEntry }, location }) => {
         </Wrapper>
       </Hero>
       <EntryWrapper id={website.skipNavId}>
-        <Entryy>{data.body.text}</Entryy>
-        {renderEssays()}
+        <Entryy>
+          <BodyText key={data.title.text} input={data.body.html} />
+        </Entryy>
+        {/* {renderEssays()} */}
       </EntryWrapper>
     </Layout>
   );
@@ -119,24 +122,12 @@ export const pageQuery = graphql`
           text
         }
         body {
-          text
+          html
         }
         category {
           document {
             data {
               name
-            }
-          }
-        }
-        essays {
-          document {
-            data {
-              title {
-                text
-              }
-              body {
-                html
-              }
             }
           }
         }

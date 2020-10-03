@@ -24,8 +24,7 @@ const Title = styled.h2`
 
 const BodyText = ({ input }) => (
   <div>
-    <Title>{input.title.text}</Title>
-    <Content dangerouslySetInnerHTML={{ __html: input.body.html }} />
+    <Content dangerouslySetInnerHTML={{ __html: input }} />
   </div>
 );
 
