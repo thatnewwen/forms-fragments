@@ -4,6 +4,10 @@ import styled from "@emotion/styled";
 
 const Content = styled.div`
   max-width: ${(props) => props.theme.maxWidthText};
+  li {
+    font-size: 11px;
+    font-family: "Source Sans Pro";
+  }
 `;
 const Title = styled.h2`
   font-size: 12px;
