@@ -161,18 +161,16 @@ Full.propTypes = {
 
 export const pageQuery = graphql`
   query FullQuery {
-    index: prismicIndex {
-      data {
-        body {
-          ... on PrismicIndexBodyEntry {
-            slice_type
-            id
+    index: allPrismicIndex {
+      nodes {
+        data {
+          body {
             primary {
-              title {
+              notes {
                 text
               }
-              notes {
-                html
+              title {
+                text
               }
             }
           }

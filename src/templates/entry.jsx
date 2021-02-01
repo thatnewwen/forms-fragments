@@ -27,9 +27,10 @@ const Hero = styled.header`
   }
   .code {
     font-family: "Source Sans Pro", -apple-system, "BlinkMacSystemFont";
-    font-size: 14px;
+    font-size: 10px;
+    margin-top: 2px;
     position: absolute;
-    margin-left: -45px;
+    margin-left: -40px;
     font-weight: 400;
     @media (max-width: ${(props) => props.theme.breakpoints.m}) {
       display: none;
