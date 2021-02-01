@@ -125,7 +125,7 @@ class Full extends Component {
           style={{ paddingTop: "2rem", paddingBottom: "2rem" }}
         >
           <Title style={{ marginTop: "4rem" }}>Index</Title>
-          <SliceZone allSlices={index.data.body} />
+          <SliceZone allSlices={index.nodes} />
         </FullWrapper>
       </Layout>
     );
