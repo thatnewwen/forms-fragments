@@ -9,7 +9,7 @@ const Item = styled.li`
 `;
 
 const Headline = styled.p`
-  font-family: "Source Sans Pro", -apple-system, "BlinkMacSystemFont",
+  font-family: "Inter", "Source Sans Pro", -apple-system, "BlinkMacSystemFont",
     "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   color: ${(props) => props.theme.colors.grey};
@@ -24,7 +24,7 @@ const Headline = styled.p`
 `;
 
 const StyledLink = styled(Link)`
-  font-family: "Source Sans Pro", -apple-system, "BlinkMacSystemFont",
+  font-family: "Inter", "Source Sans Pro", -apple-system, "BlinkMacSystemFont",
     "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;

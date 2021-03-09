@@ -8,7 +8,7 @@ const Content = styled.div`
   ${prism};
   p {
     font-size: 12px;
-    font-family: "Source Sans Pro", -apple-system, "BlinkMacSystemFont";
+    font-family: "Inter", "Source Sans Pro", -apple-system, "BlinkMacSystemFont";
   }
 
   h2{

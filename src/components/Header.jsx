@@ -59,8 +59,8 @@ const HeroInner = styled.div`
     padding-bottom: 1rem;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding-top: 2rem;
-    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.25rem;
   }
 `;
 

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 import Facebook from './Facebook'
 import Twitter from './Twitter'
+import stdBanner from '../../styles/img/formsbanner.png'
 
 // Complete tutorial: https://www.gatsbyjs.org/docs/add-seo-component/
 
@@ -157,14 +158,14 @@ const SEO = ({ title, desc, banner, pathname, article, node }) => {
       </Helmet>
       <Facebook
         desc={seo.description}
-        image={seo.image}
+        image={stdBanner}
         title={seo.title}
         type={article ? 'article' : 'website'}
         url={seo.url}
         locale={ogLanguage}
         name={facebook}
       />
-      <Twitter title={seo.title} image={seo.image} desc={seo.description} username={twitter} />
+      <Twitter title={seo.title} image={stdBanner} desc={seo.description} username={twitter} />
     </>
   )
 }

@@ -65,7 +65,7 @@ const Social = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin-left: 0;
-  font-family: "Source Sans Pro", -apple-system, "BlinkMacSystemFont",
+  font-family: "Inter", "Source Sans Pro", -apple-system, "BlinkMacSystemFont",
     "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   li {

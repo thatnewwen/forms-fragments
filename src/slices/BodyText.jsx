@@ -6,12 +6,12 @@ const Content = styled.div`
   max-width: ${(props) => props.theme.maxWidthText};
   li {
     font-size: 11px;
-    font-family: "Source Sans Pro";
+    font-family: "Inter", "Source Sans Pro";
   }
 `;
 const Title = styled.h2`
   font-size: 12px;
-  font-family: "Source Sans Pro";
+  font-family: "Inter", "Source Sans Pro";
   position: absolute;
   transform: translateX(-100%) rotate(-90deg);
   transform-origin: right;

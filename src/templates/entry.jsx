@@ -23,10 +23,10 @@ const Hero = styled.header`
   }
   h1 {
     font-size: 14px;
-    font-family: "Source Sans Pro", -apple-system, "BlinkMacSystemFont";
+    font-family: "Inter", "Source Sans Pro", -apple-system, "BlinkMacSystemFont";
   }
   .code {
-    font-family: "Source Sans Pro", -apple-system, "BlinkMacSystemFont";
+    font-family: "Inter", "Source Sans Pro", -apple-system, "BlinkMacSystemFont";
     font-size: 10px;
     margin-top: 2px;
     position: absolute;
@@ -39,7 +39,7 @@ const Hero = styled.header`
 `;
 
 const Headline = styled.p`
-  font-family: "Source Sans Pro", -apple-system, "BlinkMacSystemFont",
+  font-family: "Inter", "Source Sans Pro", -apple-system, "BlinkMacSystemFont",
     "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
   color: ${(props) => props.theme.colors.grey};
@@ -53,7 +53,7 @@ const Headline = styled.p`
 const Entryy = styled.p`
   font-size: 12px;
   max-width: 620px;
-  font-family: "Source Sans Pro";
+  font-family: "Inter", "Source Sans Pro";
   padding-bottom: 40px;
 `;
 
