@@ -12,7 +12,9 @@ const Content = styled.div`
   }
 
   h2{
-    font-size: 12px;
+    font-size: 14px;
+    font-family: "Inter","Source Sans Pro",-apple-system,"BlinkMacSystemFont";
+    margin-bottom: 0.5rem;
   }
   ,
   li {
@@ -41,7 +43,8 @@ export default class SliceZone extends Component {
   render() {
     const { allSlices } = this.props;
     console.log(allSlices)
-    const slice = allSlices.map((s) => {
+    const slice = allSlices[0].data.body.map((s) => {
+      console.log(s)
       if (s.primary) {
       return <div><h2>{s.primary.title.text}</h2><BodyText key={s.primary.title} input={s.primary.notes.html} /></div>;
       }

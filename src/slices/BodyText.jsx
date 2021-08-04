@@ -4,9 +4,15 @@ import styled from "@emotion/styled";
 
 const Content = styled.div`
   max-width: ${(props) => props.theme.maxWidthText};
-  li {
-    font-size: 11px;
+  font-size: 11px;
     font-family: "Inter", "Source Sans Pro";
+  ol {
+    margin-left: 0px;
+  }
+  li {
+    font-size: 11px !important;
+    font-family: "Inter", "Source Sans Pro";
+    margin-bottom: 0px;
   }
 `;
 const Title = styled.h2`

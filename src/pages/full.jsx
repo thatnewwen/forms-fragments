@@ -167,7 +167,7 @@ export const pageQuery = graphql`
           body {
             primary {
               notes {
-                text
+                html
               }
               title {
                 text
