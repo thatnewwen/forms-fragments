@@ -13,6 +13,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
   const entryTemplate = require.resolve("./src/templates/entry.jsx");
+  const shortTemplate = require.resolve("./src/templates/short.jsx");
   const categoryTemplate = require.resolve("./src/templates/category.jsx");
 
   const result = await wrapper(
@@ -35,12 +36,30 @@ exports.createPages = async ({ graphql, actions }) => {
             }
           }
         }
+        allPrismicShort {
+          edges {
+            node {
+              id
+              uid
+              data {
+                category {
+                  document {
+                    data {
+                      name
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     `)
   );
 
   const categorySet = new Set();
   const entriesList = result.data.allPrismicEntry.edges;
+  const shortsList = result.data.allPrismicShort.edges;
 
   // Double check that the post has a category assigned
   entriesList.forEach((edge) => {
@@ -50,8 +69,25 @@ exports.createPages = async ({ graphql, actions }) => {
 
     // The uid you assigned in Prismic is the slug!
     createPage({
-      path: `/${edge.node.uid}`,
+      path: `/longforms/${edge.node.uid}`,
       component: entryTemplate,
+      context: {
+        // Pass the unique ID (uid) through context so the template can filter by it
+        uid: edge.node.uid,
+      },
+    });
+  });
+
+  // Double check that the post has a category assigned
+  shortsList.forEach((edge) => {
+    if (edge.node.data.category) {
+      categorySet.add(edge.node.data.category.document[0].data.name);
+    }
+
+    // The uid you assigned in Prismic is the slug!
+    createPage({
+      path: `/shorts/${edge.node.uid}`,
+      component: shortTemplate,
       context: {
         // Pass the unique ID (uid) through context so the template can filter by it
         uid: edge.node.uid,

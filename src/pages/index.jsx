@@ -115,7 +115,7 @@ const IndexWrapper = Wrapper.withComponent("main");
 class Index extends Component {
   render() {
     const {
-      data: { homepage, social, entries, projects },
+      data: { homepage, social, entries, shorts, projects },
     } = this.props;
     return (
       <Layout>
@@ -124,18 +124,10 @@ class Index extends Component {
           id={website.skipNavId}
           style={{ paddingTop: "2rem", paddingBottom: "2rem" }}
         >
-          <Title style={{ marginTop: "4rem" }}>Recent notes</Title>
-          <Listing entries={entries.nodes} />
-          {/* <Title style={{ marginTop: "8rem" }}>Recent projects</Title>
-          <ProjectListing>
-            {projects.nodes.map((project) => (
-              <li key={project.primary.label.text}>
-                <a href={project.primary.link.url}>
-                  {project.primary.label.text}
-                </a>
-              </li>
-            ))}
-          </ProjectListing> */}
+          <Title style={{ marginTop: "4rem" }}>Longforms</Title>
+          <Listing type={"longform"} entries={entries.nodes} />
+          <Title style={{ marginTop: "2rem" }}>Shorts</Title>
+          <Listing type={"short"} entries={shorts.nodes} />
         </IndexWrapper>
       </Layout>
     );
@@ -160,6 +152,9 @@ Index.propTypes = {
       nodes: PropTypes.array.isRequired,
     }),
     entries: PropTypes.shape({
+      nodes: PropTypes.array.isRequired,
+    }),
+    shorts: PropTypes.shape({
       nodes: PropTypes.array.isRequired,
     }),
     projects: PropTypes.shape({
@@ -193,6 +188,27 @@ export const pageQuery = graphql`
       }
     }
     entries: allPrismicEntry(sort: { fields: [data___date], order: DESC }) {
+      nodes {
+        uid
+        data {
+          title {
+            text
+          }
+          artist {
+            text
+          }
+          date(formatString: "DD.MM.YYYY")
+          category {
+            document {
+              data {
+                name
+              }
+            }
+          }
+        }
+      }
+    }
+    shorts: allPrismicShort(sort: { fields: [data___date], order: DESC }) {
       nodes {
         uid
         data {

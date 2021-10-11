@@ -22,16 +22,14 @@ const Hero = styled.header`
     padding-top: 0rem;
   }
   h1 {
-    font-size: 72px;
+    font-size: 14px;
     font-family: "Inter", "Source Sans Pro", -apple-system, "BlinkMacSystemFont";
     margin-bottom: 5px;
-    margin-left: -4px;
   }
   .code {
     font-family: "Inter", "Source Sans Pro", -apple-system, "BlinkMacSystemFont";
     font-size: 10px;
-    margin-top: 33px;
-    transform: rotate(-90deg);
+    margin-top: 2px;
     position: absolute;
     margin-left: -40px;
     font-weight: 400;
@@ -45,7 +43,8 @@ const Headline = styled.p`
   font-family: "Inter", "Source Sans Pro", -apple-system, "BlinkMacSystemFont",
     "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
-  color: ${(props) => props.theme.colors.black};
+    color: ${(props) => props.theme.colors.black};
+  margin-bottom: 40px;
   font-size: 10px;
   text-transform: uppercase;
   a {
@@ -58,13 +57,12 @@ const Entryy = styled.p`
   font-size: 12px;
   max-width: 620px;
   font-family: "Inter", "Source Sans Pro";
-  padding-bottom: 40px;
 `;
 
 const EntryWrapper = Wrapper.withComponent("main");
 
-const Entry = ({ data: { prismicEntry }, location }) => {
-  const { data } = prismicEntry;
+const Short = ({ data: { prismicShort }, location }) => {
+  const { data } = prismicShort;
 
   // const renderEssays = () => {
   //   if (data.essays) {
@@ -77,14 +75,14 @@ const Entry = ({ data: { prismicEntry }, location }) => {
         title={`${data.title.text} | ${website.titleAlt}`}
         pathname={location.pathname}
         desc={data.title.text}
-        node={prismicEntry}
+        node={prismicShort}
         article
       />
       <Header />
       <Hero>
         <Wrapper>
           {/* <Headline>{data.date}</Headline> */}
-          <h1 className="code">{data.key.text}</h1>
+          {/* <h1 className="code">{data.key.text}</h1> */}
           <h1>
             {data.title.text}
           </h1>
@@ -101,12 +99,12 @@ const Entry = ({ data: { prismicEntry }, location }) => {
   );
 };
 
-export default Entry;
+export default Short;
 
-Entry.propTypes = {
+Short.propTypes = {
   data: PropTypes.shape({
-    prismicEntry: PropTypes.object.isRequired,
-    entries: PropTypes.shape({
+    prismicShort: PropTypes.object.isRequired,
+    shorts: PropTypes.shape({
       nodes: PropTypes.array.isRequired,
     }),
   }).isRequired,
@@ -117,8 +115,8 @@ Entry.propTypes = {
 // If this doesn't work for you query for __typename in body {} and GraphiQL will show them to you
 
 export const pageQuery = graphql`
-  query EntryBySlug($uid: String!) {
-    prismicEntry(uid: { eq: $uid }) {
+  query ShortBySlug($uid: String!) {
+    prismicShort(uid: { eq: $uid }) {
       uid
       data {
         title {
@@ -137,12 +135,9 @@ export const pageQuery = graphql`
             }
           }
         }
-        key {
-          text
-        }
       }
     }
-    entries: allPrismicEntry(
+    shorts: allPrismicShort(
       limit: 2
       sort: { fields: [data___date], order: DESC }
       filter: { uid: { ne: $uid } }

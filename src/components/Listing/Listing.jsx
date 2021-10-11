@@ -12,14 +12,15 @@ const List = styled.ul`
 
 export default class Listing extends Component {
   render() {
-    const { entries } = this.props;
+    const { entries, type } = this.props;
     return (
       <List>
         {entries.map((entry) => {
           if (entry.data.category) {
             return (
               <ListItem
-                key={entry.uid}
+                key={entry.data.uid}
+                type={type}
                 node={entry}
                 categories={entry.data.category.name}
               />
@@ -33,4 +34,5 @@ export default class Listing extends Component {
 
 Listing.propTypes = {
   entries: PropTypes.array.isRequired,
+  type: PropTypes.string.isRequired,
 };
