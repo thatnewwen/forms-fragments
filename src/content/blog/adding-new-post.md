@@ -1,170 +1,28 @@
 ---
-author: Sat Naing
+author: Alex Wen
 pubDatetime: 2022-09-23T15:22:00Z
 modDatetime: 2023-12-21T09:12:47.400Z
-title: Adding new posts in AstroPaper theme
-slug: adding-new-posts-in-astropaper-theme
+title: Endless
+slug: endless
 featured: true
 draft: false
 tags:
-  - docs
-description:
-  Some rules & recommendations for creating or adding new posts using AstroPaper
-  theme.
+  - music
+description: Music fears being confined into a space. To be labeled or categorized, is suffocating. That’s what makes Endless feel so liberating and soothing, even as it often traverses challenging—and seemingly disconnected—topics of war, technology, love, and so on.
 ---
 
-Here are some rules/recommendations, tips & ticks for creating new posts in AstroPaper blog theme.
+Music fears being confined into a space. To be labeled or categorized, is suffocating. That’s what makes _Endless_ feel so liberating and soothing, even as it often traverses challenging—and seemingly disconnected—topics of war, technology, love, and so on. Its ephemeral nature melts each track into a singular experience as R&B dips into soft rock and electronic; sequences are tied together with ambience, starts and ends are elusive. Even the unconventional release, a methodic rollout via video of Frank Ocean constructing a staircase[^1], points at a desire to live outside the lines of standard, packaged albums or directed videos—in the process, creating something structured, spontaneously.
 
-## Table of contents
+As the title asserts, there is a cyclical constant at work with the spiral staircase as a physical manifestation. _Endless’_ many ideas, some of which only last a minute or so, are not so much bookended by a beginning and end, but rather, through here’s and there’s. The direct encounters of _Blonde_ or Frank Ocean's older work are exchanged for quick glances and subtle gestures. Ideas are never fully fleshed out or explored, rather they come as invitations to explore the connections that lie in-between. So instead of fixating on the object of affection, perhaps the more interesting focal point is the act of loving.
 
-## Frontmatter
+Of course, there’s a tension in drawing attention to the fluid essence of these moments and feelings when the vessel to convey these thoughts are done through an author and their perspective and feelings, as it is through Frank Ocean here. Does music make these ideas concrete by framing it and providing a voice, or perhaps it’s merely the best we have when it comes to conveying these ephemeral concepts? (In describing the feeling of love, does it solidify and become the thing of love?)
 
-Frontmatter is the main place to store some important information about the blog post (article). Frontmatter lies at the top of the article and is written in YAML format. Read more about frontmatter and its usage in [astro documentation](https://docs.astro.build/en/guides/markdown-content/).
+With _Endless_, Frank Ocean contemplates his presence on his own album, and grapples with this implication of capturing the process. He relinquishes the spotlight, as with “Alabama,” where Ocean’s endless “What can I do?”’s harmonize before being overtaken by Sampha’s vocals. Or with “In Here Somewhere” and “Florida”, where shades of James Blake can be heard and many of the instrumentals and transitions dispersed throughout play with Ocean’s vocals. Sometimes he comes in the form of distant, faraway voices, other times he’s heavily modulated—more machine than man. He acts as a conduit. The most “complete” thought in the album is “At Your Best”, and it’s a cover of Aaliyah’s song of the same name (which in turn is a cover of The Isley Brothers song—also of the same name). Many other tracks echo this distance between listener and Frank Ocean, whether it’s Jazmine Sullivan’s voice coming in or instrumentals that mimic human voices.
 
-Here is the list of frontmatter property for each post.
+While the robotic voice in “Device Control” might hint that we’re at the mercy of technology, _Endless_ proves the opposite[^3]. Frank Ocean’s love stories are messy affairs, the emotions come and go, the voices waver. There’s an appealing imprecision—one that can only be classified as human—that can never be mimicked by a Samsung Galaxy phone. The album is one of textures, and while a computer might be able to generate an exciting spectacle, its the fine details of the process that an automated machine would miss. Whether its the looming AI creative threat, or music execs shuffling albums around like cheap cargo[^2], the larger machinery that runs a lot of the music business—which motivated Frank Ocean to release this album right with Blonde, as a way to fulfill contract obligations—can package and commodity themes, and songs, and albums, but they cannot grasp the hand-craftedness of a DIY woodworking project, and they especially can't contain the broadcasted process of it. Ironically, it's this sharing of small-scale producing that builds the bridge between a creator and their audience, to extend a narrative into something relatable.
 
-| Property           | Description                                                                                 | Remark                                        |
-| ------------------ | ------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| **_title_**        | Title of the post. (h1)                                                                     | required<sup>\*</sup>                         |
-| **_description_**  | Description of the post. Used in post excerpt and site description of the post.             | required<sup>\*</sup>                         |
-| **_pubDatetime_**  | Published datetime in ISO 8601 format.                                                      | required<sup>\*</sup>                         |
-| **_modDatetime_**  | Modified datetime in ISO 8601 format. (only add this property when a blog post is modified) | optional                                      |
-| **_author_**       | Author of the post.                                                                         | default = SITE.author                         |
-| **_slug_**         | Slug for the post. This field is optional but cannot be an empty string. (slug: ""❌)       | default = slugified file name                 |
-| **_featured_**     | Whether or not display this post in featured section of home page                           | default = false                               |
-| **_draft_**        | Mark this post 'unpublished'.                                                               | default = false                               |
-| **_tags_**         | Related keywords for this post. Written in array yaml format.                               | default = others                              |
-| **_ogImage_**      | OG image of the post. Useful for social media sharing and SEO.                              | default = SITE.ogImage or generated OG image  |
-| **_canonicalURL_** | Canonical URL (absolute), in case the article already exists on other source.               | default = `Astro.site` + `Astro.url.pathname` |
+A collective experience where an ocean of voices can exist is created, where the stories feel universal and the sound is transcendental. It allows _Endless_ to express love, pain, any of its many feelings, in its purest form—best captured in the one-two punch of “Rushes” and “Rushes To”. A state where feelings feel foreign, yet familiar, and the experiences are new, but instinctual. You can blur the border between still and motion pictures, a memory from a moment, and Frank Ocean proves, so too with music.
 
-> Tip! You can get ISO 8601 datetime by running `new Date().toISOString()` in the console. Make sure you remove quotes though.
-
-Only `title`, `description` and `pubDatetime` fields in frontmatter must be specified.
-
-Title and description (excerpt) are important for search engine optimization (SEO) and thus AstroPaper encourages to include these in blog posts.
-
-`slug` is the unique identifier of the url. Thus, `slug` must be unique and different from other posts. The whitespace of `slug` should to be separated with `-` or `_` but `-` is recommended. Slug is automatically generated using the blog post file name. However, you can define your `slug` as a frontmatter in your blog post.
-
-For example, if the blog file name is `adding-new-post.md` and you don't specify the slug in your frontmatter, Astro will automatically create a slug for the blog post using the file name. Thus, the slug will be `adding-new-post`. But if you specify the `slug` in the frontmatter, this will override the default slug. You can read more about this in [Astro Docs](https://docs.astro.build/en/guides/content-collections/#defining-custom-slugs).
-
-If you omit `tags` in a blog post (in other words, if no tag is specified), the default tag `others` will be used as a tag for that post. You can set the default tag in the `/src/content/config.ts` file.
-
-```ts
-// src/content/config.ts
-export const blogSchema = z.object({
-  // ---
-  draft: z.boolean().optional(),
-  tags: z.array(z.string()).default(["others"]), // replace "others" with whatever you want
-  // ---
-});
-```
-
-### Sample Frontmatter
-
-Here is the sample frontmatter for a post.
-
-```yaml
-# src/content/blog/sample-post.md
----
-title: The title of the post
-author: your name
-pubDatetime: 2022-09-21T05:17:19Z
-slug: the-title-of-the-post
-featured: true
-draft: false
-tags:
-  - some
-  - example
-  - tags
-ogImage: ""
-description: This is the example description of the example post.
-canonicalURL: https://example.org/my-article-was-already-posted-here
----
-```
-
-## Adding table of contents
-
-By default, a post (article) does not include any table of contents (toc). To include toc, you have to specify it in a specific way.
-
-Write `Table of contents` in h2 format (## in markdown) and place it where you want it to be appeared on the post.
-
-For instance, if you want to place your table of contents just under the intro paragraph (like I usually do), you can do that in the following way.
-
-```md
----
-# some frontmatter
----
-
-Here are some recommendations, tips & ticks for creating new posts in AstroPaper blog theme.
-
-## Table of contents
-
-<!-- the rest of the post -->
-```
-
-## Headings
-
-There's one thing to note about headings. The AstroPaper blog posts use title (title in the frontmatter) as the main heading of the post. Therefore, the rest of the heading in the post should be using h2 \~ h6.
-
-This rule is not mandatory, but highly recommended for visual, accessibility and SEO purposes.
-
-## Storing Images for Blog Content
-
-Here are two methods for storing images and displaying them inside a markdown file.
-
-> Note! If it's a requirement to style optimized images in markdown you should [use MDX](https://docs.astro.build/en/guides/images/#images-in-mdx-files).
-
-### Inside `src/assets/` directory (recommended)
-
-You can store images inside `src/assets/` directory. These images will be automatically optimized by Astro through [Image Service API](https://docs.astro.build/en/reference/image-service-reference/).
-
-You can use relative path or alias path (`@assets/`) to serve these images.
-
-Example: Suppose you want to display `example.jpg` whose path is `/src/assets/images/example.jpg`.
-
-```md
-![something](@assets/images/example.jpg)
-
-<!-- OR -->
-
-![something](../../assets/images/example.jpg)
-
-<!-- Using img tag or Image component won't work ❌ -->
-<img src="@assets/images/example.jpg" alt="something">
-<!-- ^^ This is wrong -->
-```
-
-> Technically, you can store images inside any directory under `src`. In here, `src/assets` is just a recommendation.
-
-### Inside `public` directory
-
-You can store images inside the `public` directory. Keep in mind that images stored in the `public` directory remain untouched by Astro, meaning they will be unoptimized and you need to handle image optimization by yourself.
-
-For these images, you should use an absolute path; and these images can be displayed using [markdown annotation](https://www.markdownguide.org/basic-syntax/#images-1) or [HTML img tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img).
-
-Example: Assume `example.jpg` is located at `/public/assets/images/example.jpg`.
-
-```md
-![something](/assets/images/example.jpg)
-
-<!-- OR -->
-
-<img src="/assets/images/example.jpg" alt="something">
-```
-
-## Bonus
-
-### Image compression
-
-When you put images in the blog post (especially for images under `public` directory), it is recommended that the image is compressed. This will affect the overall performance of the website.
-
-My recommendation for image compression sites.
-
-- [TinyPng](https://tinypng.com/)
-- [TinyJPG](https://tinyjpg.com/)
-
-### OG Image
-
-The default OG image will be placed if a post does not specify the OG image. Though not required, OG image related to the post should be specify in the frontmatter. The recommended size for OG image is **_1200 X 640_** px.
-
-> Since AstroPaper v1.4.0, OG images will be generated automatically if not specified. Check out [the announcement](https://astro-paper.pages.dev/posts/dynamic-og-image-generation-in-astropaper-blog-posts/).
+[^1]: The accompanying video of Frank Ocean making a staircase out of wood also has me thinking about woodworking in general, how it is work that is in tandem with the wood, with the material one is working with. The goal isn't to hide the wood, if anything, good woodwork highlights the natural patterns. In a similar way, much of _Endless'_ fragmentary nature feel like auditory notes and sketches, tones and vibes stitched together and shared, the process in public. This is in contrast to _Blonde_, which might be Frank Ocean's most polished work.
+[^2]: AI and music execs, two sides of the same coin.
+[^3]: I'm also thinking about Childish Gambino's _Before the Internet_, and it's multimedia project with the screenplay.

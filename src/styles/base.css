@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Hershey Peignot";
+  src: url(./fonts/Hershey-Peignot-Light.otf);
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(./fonts/Inter-VariableFont_opsz,wght.ttf);
+}
+
 @layer base {
   :root,
   html[data-theme="light"] {
@@ -28,8 +38,11 @@
   html[data-theme="dark"] #sun-svg {
     display: block;
   }
+  h1,h2,h3,h4{
+    @apply font-serif
+  }
   body {
-    @apply flex min-h-[100svh] flex-col bg-skin-fill font-mono text-skin-base 
+    @apply flex min-h-[100svh] flex-col bg-skin-fill font-sans text-skin-base 
     selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted;
   }
   section,
@@ -132,4 +145,16 @@
   .focus-outline {
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
+}
+
+.bgYellow {
+  width: 450px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 25%;
+  margin: auto;
+  opacity: 0.5;
+  z-index: -10;
+  filter: blur(50px);
 }

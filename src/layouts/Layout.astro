@@ -2,6 +2,8 @@
 import { LOCALE, SITE } from "@config";
 import "@styles/base.css";
 import { ViewTransitions } from "astro:transitions";
+import { Image } from "astro:assets";
+import bgYellow from "./src/assets/images/yellow.png";
 
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 
@@ -110,6 +112,7 @@ const socialImageURL = new URL(
     <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body>
+    <Image class="bgYellow" alt="" src={bgYellow} />
     <slot />
   </body>
 </html>
