@@ -23,6 +23,8 @@ const {
   canonicalURL,
   pubDatetime,
   modDatetime,
+  symbol,
+  number,
   tags,
 } = post.data;
 
@@ -42,6 +44,8 @@ const layoutProps = {
   modDatetime,
   canonicalURL,
   ogImage: ogUrl,
+  number,
+  symbol,
   scrollSmooth: true,
 };
 ---
@@ -66,8 +70,15 @@ const layoutProps = {
     </button> -->
   </div>
   <main id="main-content">
-    <div class="title-container">
-      <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
+    <div class="flex items-center flex-col">
+      <div class="font-bold text-center">{number}</div>
+      <img class="w-48 p-0 border-black text-center" src={symbol} />
+      <div class="title-line inline-flex m-0 items-center">
+        <h1 transition:name={slugifyStr(title)} class="post-title mt-0 pb-5">
+          {title}
+        </h1>
+      </div>
+      <!-- <div class="font-bold"><Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} /></div> -->
     </div>
     <!-- <Datetime
       pubDatetime={pubDatetime}
