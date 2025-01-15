@@ -39,7 +39,7 @@
     display: block;
   }
   h1,h2,h3,h4{
-    @apply font-serif
+    @apply font-sans;
   }
   body {
     @apply flex min-h-[100svh] flex-col bg-skin-fill font-sans text-skin-base 
