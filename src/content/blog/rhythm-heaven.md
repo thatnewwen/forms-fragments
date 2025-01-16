@@ -10,7 +10,7 @@ tags:
   - game
 description: There’s an instinctive pleasure to being in sync with one’s setting. It’s when things are in flow, and each action is met with proper feedback. It’s the foot taps at a music show or the chorus of hand claps during an applause, but it’s also the walking in stride with fellow commuters and the pen taps to office ambience.
 number: "002"
-symbol: "../../src/assets/rhythmsymbol.png"
+symbol: "/src/assets/rhythmsymbol.png"
 ---
 
 There’s an instinctive pleasure to being in sync with one’s setting. It’s when things are in flow, and each action is met with proper feedback. It’s the foot taps at a music show or the chorus of hand claps during an applause, but it’s also the walking in stride with fellow commuters and the pen taps to office ambience.

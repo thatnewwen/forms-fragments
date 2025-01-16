@@ -7,7 +7,7 @@ slug: endless
 featured: true
 draft: false
 number: "001"
-symbol: "../../src/assets/endlesssymbol.png"
+symbol: "/src/assets/endlesssymbol.png"
 tags:
   - music
 description: Music fears being confined into a space. To be labeled or categorized, is suffocating. That’s what makes Endless feel so liberating and soothing, even as it often traverses challenging—and seemingly disconnected—topics of war, technology, love, and so on.
