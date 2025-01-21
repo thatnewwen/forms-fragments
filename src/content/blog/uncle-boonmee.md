@@ -10,7 +10,7 @@ tags:
   - film
 description: In a form that revolves around seeing, Apichatpong Weerasethakul seeks to meditate on the things we usually can’t. In Uncle Boonmee Who Can Recall His Past Lives, boundaries are often brought to question.
 number: "003"
-symbol: "../../src/assets/unclesymbol.png"
+symbol: "./unclesymbol.png"
 ---
 
 In a form that revolves around seeing, Apichatpong Weerasethakul seeks to meditate on the things we usually can’t. In _Uncle Boonmee Who Can Recall His Past Lives_, boundaries are often brought to question. As Boonmee sits at the dinner table with his sister-in-law Jen and nephew Tong, they’re greeted by Boonmee’s late wife, Huay—who appears as a translucent ghost. Then, Boonmee’s long lost son, Boonsong, appears—in the form of a non-human Monkey Ghost. Drawn to Boonmee’s own failing health, the line between life and death begin to blur, and so too the one’s between human and non-human. And while Huay does not exist in the realm of the living, and Boonsong does not appear as he did in the past, they all carry on a conversation—as if a soul, or a consciousness of sorts, or something, transcends these barriers that we usually use to distinguish such things.

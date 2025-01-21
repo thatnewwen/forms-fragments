@@ -8,6 +8,7 @@ import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
+import { Image } from "astro:assets";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -72,7 +73,7 @@ const layoutProps = {
   <main id="main-content">
     <div class="flex items-center flex-col">
       <div class="font-bold text-center">{number}</div>
-      <img class="w-48 p-0 border-black text-center" src={symbol} />
+      <Image alt="" class="w-48 p-0 border-black text-center" src={symbol} />
       <div class="title-line inline-flex m-0 items-center">
         <h1 transition:name={slugifyStr(title)} class="post-title mt-0 pb-5">
           {title}
