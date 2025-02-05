@@ -7,7 +7,7 @@ export const SITE: Site = {
   title: "forms/fragments",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: false,
-  postPerPage: 3,
+  postPerPage: 10,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
 };
 
