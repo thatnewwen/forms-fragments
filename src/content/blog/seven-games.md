@@ -8,7 +8,7 @@ featured: true
 draft: false
 tags:
   - book
-description: Traveling, from life to death, from Osaka to a small seaside village, across time and space. *Maborosi* charts the journeys we embark on, and the questions we ask along the way.
+description: It’s a very human endeavor to aspire to be the best backgammon player in the world, just as it’s a very human endeavor to want to create a backgammon computer to beat the best player in the world.
 number: "011"
 symbol: "./seven-games.png"
 ---
