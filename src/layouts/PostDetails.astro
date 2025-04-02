@@ -27,6 +27,7 @@ const {
   symbol,
   number,
   tags,
+  artist,
 } = post.data;
 
 const { Content } = await post.render();
@@ -47,6 +48,7 @@ const layoutProps = {
   ogImage: ogUrl,
   number,
   symbol,
+  artist,
   scrollSmooth: true,
 };
 ---
@@ -73,20 +75,22 @@ const layoutProps = {
   <main id="main-content">
     <div class="flex items-center flex-col">
       <div class="font-bold text-center">{number}</div>
-      <Image alt="" class="w-48 p-0 border-black text-center" src={symbol} />
-      <div class="title-line inline-flex m-0 items-center">
-        <h1 transition:name={slugifyStr(title)} class="post-title mt-0 pb-5">
+      <Image alt="" class="w-40 p-0 border-black text-center" src={symbol} />
+      <div class="title-line flex flex-col text-center m-0 items-center">
+        <h1
+          transition:name={slugifyStr(title)}
+          class="post-title mt-0 pb-2 text-lg"
+        >
           {title}
         </h1>
+        <h2 class="uppercase font-bold">{artist}</h2><Datetime
+          pubDatetime={pubDatetime}
+          modDatetime={modDatetime}
+          size="lg"
+          className="my-2"
+        />
       </div>
-      <!-- <div class="font-bold"><Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} /></div> -->
     </div>
-    <!-- <Datetime
-      pubDatetime={pubDatetime}
-      modDatetime={modDatetime}
-      size="lg"
-      className="my-2"
-    /> -->
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
@@ -108,7 +112,7 @@ const layoutProps = {
     @apply mx-auto w-full max-w-3xl px-4 pt-12 pb-12;
   }
   .post-title {
-    @apply text-5xl font-bold;
+    @apply text-3xl font-bold;
   }
 </style>
 
@@ -166,7 +170,7 @@ const layoutProps = {
       heading.appendChild(link);
     }
   }
-  addHeadingLinks();
+  // addHeadingLinks();
 
   /** Attaches copy buttons to code blocks in the document,
    * allowing users to copy code easily. */

@@ -11,6 +11,7 @@ tags:
 description: It’s a very human endeavor to aspire to be the best backgammon player in the world, just as it’s a very human endeavor to want to create a backgammon computer to beat the best player in the world.
 number: "011"
 symbol: "./seven-games.png"
+artist: Oliver Roeder
 ---
 
 At first glance, the subtitle almost looks like a misnomer, while author Oliver Roeder spends a chunk of the book working through seven games—checkers, backgammon, chess, go, poker, Scrabble, and bridge[^1]—and how the best players in each play, a large portion of the book is actually about AI and computers. From AlphaGo to Deep Blue, and the many programmers behind each computer, Roeder is fascinated by how each of these computers tried and—for the most part—succeeded in besting the best players at their own game. What does that mean for the game? And what does that mean for humanity?

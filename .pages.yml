@@ -15,6 +15,7 @@ content:
       - { name: title, label: Title, type: string, required: true }
       - { name: ogImage, label: Title, type: string }
       - { name: symbol, label: Symbol, type: string }
+      - { name: artist, label: Artist, type: string }
       - { name: number, label: Number, type: string }
       - { name: slug, label: Slug, type: string }
       - { name: featured, label: Featured, type: boolean }
